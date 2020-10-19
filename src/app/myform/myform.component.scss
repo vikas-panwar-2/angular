@@ -1,0 +1,101 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@mixin mymessage {
+  width: 95%;
+  border-radius:3px;
+}
+
+@mixin mymessage1{
+  font-family: 'Fredoka One', cursive; 
+  color:mintcream;
+  margin:auto;
+}
+
+html, body {min-height: 100%;}
+
+
+.messages1{
+  @include mymessage();
+  @include mymessage1();
+  background-color:rgb(30, 145, 65,0.7);
+  border:2px solid rgb(40, 105, 45);
+  
+}
+
+.messages2{
+  @include mymessage();
+  @include mymessage1();
+  background-color:rgba(235, 8, 8, 0.6);
+  border:2px solid rgba(235, 8, 8);
+}
+
+.show{
+  @include mymessage1();
+  white-space: pre-line; 
+  border-radius:3px; 
+  width:80% ; 
+  margin-top: 20pt;
+  background-color: rgba(28, 79, 121, 0.7);
+}
+
+.feed{
+  @include mymessage1();
+  width:70%;
+  margin-bottom:15pt;
+  border-radius:5px;
+  background-color: rgba(28, 79, 121, 0.7);
+}
+
+
+.bg {
+    /* The image used */
+    background-image:linear-gradient(rgba(20, 140, 238, 0.7),rgba(12, 70, 124, 0.5)),url("../../assets/images/myback2.jpg");
+    /* Full height */
+    height: 100vh;
+    background-size: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin:0;
+    padding:0;
+    position:relative;
+  }
+
+  form {
+    margin-top: 50px;
+}
+
+.field{
+    background-color: red;
+    color:rgb(68, 52, 156)
+}
+
+.button{
+    color:rgb(245, 252, 249);
+    background-color: rgba(20, 140, 238); 
+    font-family: 'Fredoka One', cursive; 
+    margin-bottom:10pt;
+    &:hover{
+        background-color: rgb(17, 31, 230);
+    }
+}
+
+.detail {
+  justify-content: center; 
+  height:80vh;
+  background-color: rgb(247, 246, 242,0.7);
+  // margin : 0 auto ;
+  width: 50%;
+  margin:auto;
+  position:absolute;
+  top:0;bottom:0;
+  left:0;right:0;
+  // max-width:100%;
+  // max-height:100%;
+  overflow:auto;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+

@@ -1,0 +1,48 @@
+<body class="bg">
+  <div class="detail">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div>
+        <mat-form-field appearance="outline"
+          style="width:95%; margin-left:2pt;margin-right: 2pt; font-family: 'Fredoka One', cursive;">
+          <mat-label>Name*</mat-label>
+          <input matInput placeholder="name" formControlName="name"
+            style="color:rgb(80, 71, 71);font-family: 'Fredoka One', cursive;">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline"
+          style="width:95%; margin-left:2pt;margin-right: 2pt; font-family: 'Fredoka One', cursive;">
+          <mat-label>Email*</mat-label>
+          <input matInput placeholder="abc@xyz.com" formControlName="email"
+            style="color:rgb(80, 71, 71); font-family: 'Fredoka One', cursive;">
+        </mat-form-field>
+      </div>
+
+      <div class="feed">
+        <h5>Feedback*</h5>
+        <input type="radio" value='Okay' formControlName="feedback" ><span style="margin-left:3pt;margin-right: 10pt ;">Okay</span>
+        <input type="radio" value='Great' formControlName="feedback" ><span style="margin-left:3pt;margin-right: 10pt ;">Great</span>
+        <input type="radio" value='Not Good' formControlName="feedback" ><span style="margin-left:3pt;margin-right: 10pt ;">Not Good</span>
+      </div>
+      <div>
+        <mat-form-field appearance="outline"
+          style="width:95%; margin-left:2pt;margin-right: 2pt; font-family: 'Fredoka One', cursive;">
+          <mat-label>Comment</mat-label>
+          <textarea matInput formControlName="comment"
+            style="color:rgb(80, 71, 71); font-family: 'Fredoka One', cursive;"></textarea>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!myForm.valid"  class="button">Submit</button>
+    </form>
+    <div *ngIf="succmessage"
+       class="messages1">
+      Post Request Successful</div>
+    <div *ngIf="errmessage"
+      class="messages2">
+      Post Request Unsuccessful</div>
+    <div
+      class="show">
+      {{ message }}
+    </div>
+  </div>
+</body>
